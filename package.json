@@ -1,0 +1,21 @@
+{
+  "name": "citrus-hack-2021",
+  "version": "1.0.0",
+  "description": "Citrus Hack 2021 Project",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "line-reader": "^0.4.0",
+    "mailparser": "^3.2.0",
+    "nodemailer": "^6.5.0",
+    "request": "^2.88.2",
+    "smtp-server": "^3.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
