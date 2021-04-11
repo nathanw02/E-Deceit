@@ -90,16 +90,22 @@ function main(email, from){
             keywordCheck(subject, res => {
                 matches.push(...res);
                 results.keyword.match = matches;
-            
-                linkCheck(link, res => {
-                    results.link = res;
-
+                
+                if(link.length == 0){
+                    results.link = ['none'];
                     let mail = new Mail(from, results, transporter);
                     mail.send();
-
-                });
+                }else{
+                    linkCheck(link, res => {
+                        results.link = res;
+    
+                        let mail = new Mail(from, results, transporter);
+                        mail.send();
+    
+                    });
+                }
             });
-        
+                
         });
     });
 }

@@ -39,7 +39,10 @@ module.exports = class Mail{
         text += '\n';
 
         let link = this.results.link;
-        if(link.length == 0){
+        if(link[0] == 'none'){
+            text += '✅ No links found in email\n';
+            
+        }else if(link.length == 0){
             text += '✅ Links in email are not malicious ACCORDING TO the Google Safe Browsing Lookup API\n';
         
         }else{
